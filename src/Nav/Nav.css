@@ -1,3 +1,10 @@
+.app-nav {
+  background-color: var(--bg-color-nav);
+  color: var(--text-color-nav);
+  display: flex;
+  align-items: center;
+}
+
 .menu-toggle {
   background-color: var(--bg-color-nav-menu);
   border: none;
@@ -17,4 +24,42 @@
 
 .menu-toggle__icon svg {
   fill: var(--text-color-nav);
+}
+
+.app-nav__logo {
+  display: block;
+  width: 130px;
+  height: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.app-nav__title-bar {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.app-nav__document {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-left: 1px solid var(--color-gray-600);
+}
+
+.document__icon {
+  grid-row: span 2;
+}
+
+.document__title {
+  flex: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.document__label,
+.document__name {
+  margin: 0;
 }

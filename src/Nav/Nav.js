@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import './Nav.css'
 import classNames from "classnames";
+import logo from './logo.svg'
 
 function Nav({isMenuShowing, onToggleMenu}) {
   function ToggleIcon() {
@@ -38,22 +39,24 @@ function Nav({isMenuShowing, onToggleMenu}) {
         <ToggleIcon />
         <span className="menu-toggle__text visually-hidden">{ isMenuShowing ? 'Close menu' : 'Show menu' }</span>
       </button>
-      <div className="nav__logo">Markdown</div>
-      <div className="nav__document">
-        <div className="document__title">
-          <i className="document__icon"></i>
-          <p className="document__label">Document name</p>  
-          <p className="document__name">welcome.md</p>
-        </div>  
-        <div className="document__controls">
-          <button className="document__delete">
-            <span className="button-text button-text--hidden">Delete</span>
-            <i className="button-icon"></i>
-          </button>
-          <button className="document__save">
-            <span className="button-text">Save changes</span>
-            <i className="button-icon"></i>
-          </button>
+      <div className="app-nav__title-bar">
+        <img className="app-nav__logo" src={logo} alt="Markdown" />
+        <div className="app-nav__document">
+          <div className="document__title">
+            <i className="document__icon"></i>
+            <p className="document__label">Document name</p>  
+            <p className="document__name">welcome.md</p>
+          </div>  
+          <div className="document__controls">
+            <button className="document__delete">
+              <span className="button-text button-text--hidden">Delete</span>
+              <i className="button-icon"></i>
+            </button>
+            <button className="document__save">
+              <span className="button-text">Save changes</span>
+              <i className="button-icon"></i>
+            </button>
+          </div>
         </div>
       </div>
     </nav>

@@ -13,6 +13,11 @@
   --color-orange: #F39765;
 
   --text-color-nav: var(--color-gray-100);
+
+  --font-body: 'Roboto Slab', serif;
+  --font-alt:    'Roboto', sans-serif;
+  --font-code: 'Roboto Mono', monospace;
+
   --bg-color-button: var(--color-orange-dark);
   --bg-color-nav: var(--color-gray-800);
   --bg-color-nav-menu: var(--color-gray-700);

@@ -7,3 +7,7 @@
   flex: 1;
   background-color: var(--bg-color-editor);
 }
+
+.editor-markdown {
+  font-family: var(--font-code);
+}
