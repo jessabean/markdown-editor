@@ -66,3 +66,36 @@
   width: 1px;
   white-space: nowrap;
 }
+
+.button {
+  background-color: var(--bg-color-button);
+  border: none;
+  color: var(--color-gray-100);
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 4px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-orange);
+}
+
+.button--icon,
+.button--icon:hover {
+  background-color: transparent;
+}
+
+.button-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-top: -0.1em;
+  fill: var(--color-gray-100);
+}
+
+.button-icon + .button-text {
+  margin-left: 12px;
+}
