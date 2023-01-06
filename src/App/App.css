@@ -37,6 +37,8 @@
   --bg-color-code: var(--color-gray-200);
   --bg-color-quote: var(--color-gray-200);
   --bg-color-modal: var(--color-gray-100);
+
+  --border-color-editor: var(--color-gray-300);
 }
 
 :root[data-theme="dark"] {
@@ -53,6 +55,18 @@
   --bg-color-code: var(--color-gray-800);
   --bg-color-quote: var(--color-gray-800);
   --bg-color-modal: var(--color-gray-900);
+
+  --border-color-editor: var(--color-gray-600);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .visually-hidden {
