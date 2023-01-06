@@ -1,0 +1,9 @@
+.editor-layout {
+  display: flex;
+}
+
+.editor-markdown,
+.editor-preview {
+  flex: 1;
+  background-color: var(--bg-color-editor);
+}
