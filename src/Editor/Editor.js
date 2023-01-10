@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import './Editor.css'
 import { marked } from "marked";
+import DOMPurify from 'dompurify';
 
 function Editor({isEditing, onUpdate}) {
   const [markdownText, setMarkdownText] = useState(isEditing.text);
@@ -12,7 +13,7 @@ function Editor({isEditing, onUpdate}) {
   }
 
   function renderText(text) {
-    const __html = marked(text, { sanitize: true })
+    const __html = DOMPurify.sanitize(marked(text));
     return { __html }
   }
 
