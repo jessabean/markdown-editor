@@ -44,3 +44,11 @@ Users should be able to:
 - **Bonus:** Build this project as a full-stack application
 
 ## Notes & to do
+
+[ ] Sidebar
+[x] Rewrite localstorage `text` key to be an array of markdown files
+[ ] Responsive design
+[ ] Allow full page preview
+[ ] Ability to rename files
+[ ] Ability to delete files
+[ ] DB storage

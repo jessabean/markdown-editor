@@ -2,29 +2,13 @@ import { useState, useEffect } from "react";
 import './Editor.css'
 import { marked } from "marked";
 
-function Editor() {
-  const [markdownText, setMarkdownText] = useState(() => {
-    if (typeof window === 'undefined') {
-      return '';
-    }
-
-    try {
-      const text = localStorage.getItem('text');
-
-      return text ? text : '';
-    } catch (error) {
-      console.log(error);
-      return '';
-    }
-  });
+function Editor({isEditing, onUpdate}) {
+  const [markdownText, setMarkdownText] = useState(isEditing.text);
 
   function handleChange(event) {
     const text = event.target.value;
     setMarkdownText(text);
-  }
-
-  function handleSave() {
-    localStorage.setItem('text', markdownText);
+    onUpdate({...isEditing, text: text});
   }
 
   function renderText(text) {
@@ -34,7 +18,6 @@ function Editor() {
 
   useEffect(() => {
     setMarkdownText(markdownText);
-    handleSave();
   }, [markdownText])
   
 

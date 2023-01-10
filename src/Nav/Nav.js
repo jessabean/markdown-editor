@@ -22,10 +22,6 @@ function Nav({isMenuShowing, onToggleMenu}) {
       </svg>
     )
   }
-
-  useEffect(() => {
-    console.log(isMenuShowing);
-  }, [isMenuShowing])
   
   return(
     <nav className="app-nav">
