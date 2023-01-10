@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import Editor from '../Editor/Editor';
 import Nav from '../Nav/Nav';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const initialFile = {
   id: 123,
@@ -60,15 +60,17 @@ function App() {
   }, [theme, showMenu, currentFile]);
 
   return (
-    <div className="App">
-      <Helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
-      </Helmet>
-      <Nav isMenuShowing={showMenu} onToggleMenu={handleToggle} />
-      <Editor isEditing={currentFile} onUpdate={handleFileSave} />
-    </div>
+    <HelmetProvider>
+      <div className="App">
+        <Helmet>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+        </Helmet>
+        <Nav isMenuShowing={showMenu} onToggleMenu={handleToggle} />
+        <Editor isEditing={currentFile} onUpdate={handleFileSave} />
+      </div>
+    </HelmetProvider>
   );
 }
 
